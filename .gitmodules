@@ -1,0 +1,3 @@
+[submodule "Assets/ScriptableObjectFramework"]
+	path = Assets/ScriptableObjectFramework
+	url = https://github.com/richardkopelow/ScriptableObjectFramework.git
