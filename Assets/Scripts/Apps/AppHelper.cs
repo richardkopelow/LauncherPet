@@ -4,13 +4,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu]
-public class PackageHelper : ScriptableObject
+public class AppHelper : ScriptableObject
 {
     private AndroidJavaClass plugin;
     private AndroidJavaObject currentActivity;
     private AndroidJavaObject packageManager;
 
-    public List<App> Packages
+    public List<App> Apps
     {
         get
         {

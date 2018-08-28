@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 84cce9170a856fc4796d5207d9f8352e, type: 3}
-  m_Name: AppsBarVisible
+  m_Name: ActionBarVisible
   m_EditorClassIdentifier: 
   saveInPlayMode: 0
   value: 0
@@ -24,7 +24,7 @@ MonoBehaviour:
         UseNormal: 1
       Event:
         UseHandler: 0
-        SOBacking: {fileID: 11400000, guid: a42d0e1755e15774b9b70a0ba00d22bd, type: 2}
+        SOBacking: {fileID: 11400000, guid: 206c1f32e8af12e488ae02c2c8ee8427, type: 2}
         Handler: {fileID: 0}
     - ExecutionMode: 0
       Condition: 0
@@ -34,5 +34,5 @@ MonoBehaviour:
         UseNormal: 1
       Event:
         UseHandler: 0
-        SOBacking: {fileID: 11400000, guid: 626d739ceeb4cf1448eb837ccbb8e800, type: 2}
+        SOBacking: {fileID: 11400000, guid: 2102342ad44ce564dac203cf1bfbabb0, type: 2}
         Handler: {fileID: 0}

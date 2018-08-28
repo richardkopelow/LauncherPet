@@ -6,6 +6,7 @@ using UnityEngine.Events;
 [CreateAssetMenu(fileName = "NewAppEvent", menuName = "Scriptable Objects/Events/App")]
 public class AppEventBacking : BaseEventBacking<App, AppUnityEvent> { }
 
+[Serializable]
 public class AppUnityEvent : UnityEvent<App> { }
 
 [Serializable]

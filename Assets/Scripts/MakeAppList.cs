@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class MakeAppList : MonoBehaviour
 {
-    public PackageHelper packageHelper;
+    public AppHelper packageHelper;
     public RectTransform ScrollContent;
     public RectTransform AppDisplayButton;
 
     private void Start()
     {
-        List<App> packages = packageHelper.Packages;
+        List<App> packages = packageHelper.Apps;
         Vector3 sizeDelta = ScrollContent.sizeDelta;
         sizeDelta.y = packages.Count * AppDisplayButton.sizeDelta.y;
         ScrollContent.sizeDelta = sizeDelta;

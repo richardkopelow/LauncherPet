@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class AppButton : MonoBehaviour
 {
-    public PackageHelper PackageHelper;
+    public AppHelper PackageHelper;
     public App Package;
     public AppEvent Event;
 
