@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 
-public class Package
+public class App
 {
     public AndroidJavaObject ResolveInfo;
     public AndroidJavaObject ActivityInfo;
@@ -12,7 +12,7 @@ public class Package
     public Texture2D Icon;
     public string Name;
 
-    public Package(AndroidJavaObject resolveInfo,
+    public App(AndroidJavaObject resolveInfo,
         AndroidJavaObject activityInfo,
         AndroidJavaObject applicationInfo,
         Texture2D icon,

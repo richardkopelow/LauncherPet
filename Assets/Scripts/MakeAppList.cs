@@ -10,7 +10,7 @@ public class MakeAppList : MonoBehaviour
 
     private void Start()
     {
-        List<Package> packages = packageHelper.Packages;
+        List<App> packages = packageHelper.Packages;
         Vector3 sizeDelta = ScrollContent.sizeDelta;
         sizeDelta.y = packages.Count * AppDisplayButton.sizeDelta.y;
         ScrollContent.sizeDelta = sizeDelta;

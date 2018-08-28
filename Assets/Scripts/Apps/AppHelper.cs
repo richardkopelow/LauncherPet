@@ -10,11 +10,11 @@ public class PackageHelper : ScriptableObject
     private AndroidJavaObject currentActivity;
     private AndroidJavaObject packageManager;
 
-    public List<Package> Packages
+    public List<App> Packages
     {
         get
         {
-            List<Package> packages = new List<Package>();
+            List<App> packages = new List<App>();
             AndroidJavaObject packagesNative = plugin.CallStatic<AndroidJavaObject>("installedApps", packageManager);//packageManager.Call<AndroidJavaObject>("getInstalledApplications", 0);
             int count = packagesNative.Call<int>("size");
 
@@ -29,7 +29,7 @@ public class PackageHelper : ScriptableObject
                     Texture2D texture = new Texture2D(1, 1, TextureFormat.ARGB32, false);
                     texture.LoadImage(decodedBytes);
 
-                    packages.Add(new Package(
+                    packages.Add(new App(
                         currentObject,
                         activityInfo,
                         appInfo,
@@ -57,7 +57,7 @@ public class PackageHelper : ScriptableObject
 #endif
     }
 
-    public void StartApplication(Package package)
+    public void StartApplication(App package)
     {
         AndroidJavaObject launchIntent = plugin.CallStatic<AndroidJavaObject>("getIntent", package.ActivityInfo);
         currentActivity.Call("startActivity", launchIntent);

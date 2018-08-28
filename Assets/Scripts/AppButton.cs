@@ -6,17 +6,17 @@ using UnityEngine.UI;
 public class AppButton : MonoBehaviour
 {
     public PackageHelper PackageHelper;
-    public Package Package;
+    public App Package;
+    public AppEvent Event;
 
-
-    public void StartApp()
-    {
-        PackageHelper.StartApplication(Package);
-    }
-
-    public void SetPackage(Package package)
+    public void SetPackage(App package)
     {
         Package = package;
         GetComponent<Transform>().GetComponent<RawImage>().texture = package.Icon;
+    }
+
+    public void OnClick()
+    {
+        Event.Fire(Package);
     }
 }
