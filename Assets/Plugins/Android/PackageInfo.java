@@ -1,6 +1,8 @@
 package androidhelper.brasshatstudios.androidhelper;
 
+import android.app.WallpaperManager;
 import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.ApplicationInfo;
@@ -41,6 +43,20 @@ public class PackageInfo {
         } catch (Exception e) {
             return null;
         }
+    }
+
+    public static byte[] getWallpaper(Context context)
+    {
+        WallpaperManager wallpaperManager = WallpaperManager.getInstance(context);
+        Drawable wallpaper = wallpaperManager.getDrawable();
+        Bitmap bmp = Bitmap.createBitmap(wallpaper.getIntrinsicWidth(), wallpaper.getIntrinsicHeight(), Bitmap.Config.ARGB_8888);
+        Canvas can = new Canvas(bmp);
+        wallpaper.setBounds(0, 0, can.getWidth(), can.getHeight());
+        wallpaper.draw(can);
+        ByteArrayOutputStream stream = new ByteArrayOutputStream();
+        bmp.compress(Bitmap.CompressFormat.PNG, 100, stream);
+        byte[] byteArray = stream.toByteArray();
+        return byteArray;
     }
 
     public static Intent getIntent(ActivityInfo activity)

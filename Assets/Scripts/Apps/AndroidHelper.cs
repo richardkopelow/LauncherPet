@@ -1,10 +1,10 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [CreateAssetMenu]
-public class AppHelper : ScriptableObject
+public class AndroidHelper : ScriptableObject
 {
     private AndroidJavaClass plugin;
     private AndroidJavaObject currentActivity;
@@ -43,7 +43,18 @@ public class AppHelper : ScriptableObject
                 }
             }
 
-            return packages;
+            return packages.OrderBy(app => app.Name).ToList();
+        }
+    }
+
+    public Texture2D Wallpaper
+    {
+        get
+        {
+            byte[] wallpaperBytes = plugin.CallStatic<byte[]>("getWallpaper", currentActivity.Call<AndroidJavaObject>("getApplicationContext"));
+            Texture2D texture = new Texture2D(1, 1, TextureFormat.ARGB32, false);
+            texture.LoadImage(wallpaperBytes);
+            return texture;
         }
     }
 

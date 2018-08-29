@@ -128,3 +128,15 @@ MonoBehaviour:
     UseHandler: 0
     SOBacking: {fileID: 11400000, guid: 6b171cf39db79e1459b86b60dc12d775, type: 2}
     Handler: {fileID: 0}
+  PressThreshold:
+    NormalValue: 0
+    SOValue: {fileID: 11400000, guid: 171e76ddd9a7aea41b2daf64230ebae6, type: 2}
+    UseNormal: 0
+  IconDragForce:
+    NormalValue: 0
+    SOValue: {fileID: 11400000, guid: 12a32dca4b33fbf4a9f60ceb76becd3e, type: 2}
+    UseNormal: 0
+  RoomLayer:
+    NormalValue: 
+    SOValue: {fileID: 11400000, guid: f1fe1c71f660348498e40d0beea6c692, type: 2}
+    UseNormal: 0

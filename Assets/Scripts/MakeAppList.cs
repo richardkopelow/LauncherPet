@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MakeAppList : MonoBehaviour
 {
-    public AppHelper packageHelper;
+    public AndroidHelper packageHelper;
     public RectTransform ScrollContent;
     public RectTransform AppDisplayButton;
 
