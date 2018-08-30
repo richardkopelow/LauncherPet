@@ -106,17 +106,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 11400000, guid: a5a6ca9773410384dacedc5822243e00, type: 2}
-        m_MethodName: set_Value
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114587757922143340
@@ -131,10 +120,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PackageHelper: {fileID: 11400000, guid: 332408e3fc6900a45a173ea34854b426, type: 2}
-  Event:
+  Click:
     UseHandler: 0
-    SOBacking: {fileID: 11400000, guid: 7e09048e7ff4e9644963d9da89a4441c, type: 2}
+    SOBacking: {fileID: 11400000, guid: 6b171cf39db79e1459b86b60dc12d775, type: 2}
     Handler: {fileID: 0}
+  LongPress:
+    UseHandler: 0
+    SOBacking: {fileID: 11400000, guid: e3aa676d0dccb0c4e86f1785cfea3890, type: 2}
+    Handler: {fileID: 0}
+  LongPressThreshold:
+    NormalValue: 0
+    SOValue: {fileID: 11400000, guid: 171e76ddd9a7aea41b2daf64230ebae6, type: 2}
+    UseNormal: 0
 --- !u!222 &222145063758709782
 CanvasRenderer:
   m_ObjectHideFlags: 1

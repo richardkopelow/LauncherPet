@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 65409054072984368}
   - component: {fileID: 54393319451109682}
   - component: {fileID: 114240342834147882}
+  - component: {fileID: 114232699367747910}
   m_Layer: 0
   m_Name: PhysicalAppIcon
   m_TagString: Untagged
@@ -113,6 +114,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114232699367747910
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1483684669910426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46b2c2560eac2424ba103725f89c8241, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Sets:
+  - {fileID: 11400000, guid: a244ac20a5474e643b7ef6579ebbbfb8, type: 2}
 --- !u!114 &114240342834147882
 MonoBehaviour:
   m_ObjectHideFlags: 1

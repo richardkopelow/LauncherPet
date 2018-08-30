@@ -11,6 +11,7 @@ public class App
     public AndroidJavaObject ApplicationInfo;
     public Texture2D Icon;
     public string Name;
+    public string PackageName => ApplicationInfo?.Get<string>("packageName");
 
     public App(AndroidJavaObject resolveInfo,
         AndroidJavaObject activityInfo,
