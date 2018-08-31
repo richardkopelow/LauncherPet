@@ -58,5 +58,9 @@ public class PhysicalAppIcon : MonoBehaviour
     private void FixedUpdate()
     {
         rigid.AddForce(moveForce);
+        if (rigid.position.y<-40)
+        {
+            Destroy(gameObject);
+        }
     }
 }
